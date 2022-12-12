@@ -1,0 +1,56 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{calc}
+\usepackage{tikz}
+\usepackage{array}
+\usepackage{polynom}
+
+\title{Adv. Functions Cheat Sheet}
+\author{Alex Lavallee }
+\date{December 2022}
+
+\begin{document}
+
+\include{longdiv}
+
+\maketitle
+
+\section{Polynomial Functions}
+Function Notation: $f(x)=d(x)q(x)+r(x)$, which is equivalent to the division statement of any polynomial, and where: \begin{itemize}
+    \item $f(x)$ is the dividend
+    \item $d(x)$ is the divisor
+    \item $q(x)$ is the quotient
+    \item $r(x)$ is the remainder
+\end{itemize}
+
+If the remainder is $0$, then the divisor and quotient are both factors of the dividend. The two methods of dividing polynomials are displayed below. They are both the division of $(3x^3-5x^2+8x-1) \div (x-3)$. \\
+
+Polynomial Long Division: 
+\polylongdiv{3x^3-5x^2+8x-1}{x-3} \\
+\\Synthetic Division:
+\polyhornerscheme[x=3]{3x^3-5x^2+8x-1} \\
+\\When doing synthetic division, which requires the divisor to be of degree $1$, remember to use $0$ as a placeholder where there is an absent term relative to the range of degrees present in the dividend. \\ \\
+
+Remainder Theorem states that if $f(x)$ is divided by $(x-p)$, the remainder is equal to $f(p)$. Alternatively, if the divisor is $(ax-p)$, then the remainder is $f(\frac{p}{a})$. \\ \\\
+
+Factor Theorem states that $(x-p)$ is a factor of $f(x)$ iff $f(p)=0$. Note that you will have to guess and check in order to determine the first factor, and then division may be used from there. \\ \\
+
+Difference of Cubes: $x^3-y^3=(x-y)(x^2+xy+y^2)$ \\ \\
+Sum of Cubes: $x^3+y^3=(x+y)(x^2-xy+y^2)$ \\ \\
+
+Given these factoring strategies, when solving polynomials the suggested order of strategies to be used is: \begin{enumerate}
+    \item Common Factor
+    \item Difference of Squares
+    \item Trinomials
+    \item Grouping
+    \item Sum/Difference of Cubes
+    \item Factor Theorem
+\end{enumerate}
+
+
+
+
+
+
+
+\end{document}
