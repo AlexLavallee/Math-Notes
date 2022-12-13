@@ -4,6 +4,7 @@
 \usepackage{tikz}
 \usepackage{array}
 \usepackage{polynom}
+\usepackage{amsfonts}
 
 \title{Adv. Functions Cheat Sheet}
 \author{Alex Lavallee }
@@ -47,10 +48,102 @@ Given these factoring strategies, when solving polynomials the suggested order o
     \item Factor Theorem
 \end{enumerate}
 
+For graphing polynomial functions, A polynomial function of degree $n$ has: 
+\begin{itemize}
+    \item at most $n$ solutions
+    \item at most $n-1$ turns
+    \item the domain is $x \in \mathbb{R}$ \\
+\end{itemize}
 
+for polynomial functions of an even degree, the following is true: \begin{itemize}
+    \item If $a > 0$, the function will go from QI to QII or vice versa.
+    \item If $a < 0$, the function will go from QIII to QIV or vice versa.
+    \item There may be no real solutions to the function.\\
+\end{itemize}
+for polynomial functions of an odd degree, the following is true: \begin{itemize}
+    \item If $a > 0$, the function will go from QI to QIII or vice versa.
+    \item if $a < 0$, the function will go from QII to QIV or vice versa.
+    \item There must be at least one real solution to the function.\\
+\end{itemize}
 
+Sketching Algorithm: \begin{itemize}
+    \item Standard form must be converted to factored form.
+    \item The degree indicates the number of terms, as indicated above.
+    \item The leading coefficient indicates the end behaviour.
+    \item identify x and y intercepts.
+    \item Plot the intercepts and carefully connect the curve they form.
+\end{itemize}
 
+Families of functions: Given a general description of a polynomial, a family of curves may be established that satisfy the description. To find a specific member of that family, a point on the function must be substituted into the family function.
 
+\section{Rational Functions}
 
+A rational function is a function that satisfies the following: \\ $f(x)=\frac{p(x)}{q(x)}, q(x) \neq 0$
+
+Vertical Asymptotes: An asymptote is a line that a graph approaches. It can be a type of discontinuity, that is to say the function is not continuous at the asymptote. For a vertical asymptote to exist, there must be a restriction on the independent variable, often such that the denominator of the function cannot equal $0$. In order to describe the behaviour of vertical asymptotes, we use limits. For example, given the graph $f(x)=\frac{1}{x+2}$, we know there is a VA at $-2$, as: \\
+
+$\lim_{x\to -2^-} = -\infty$ \\
+and; \\
+$\lim_{x\to -2^+} = \infty$ \\
+
+It is said that a VA exists when the limit from either side is $\infty$ or $-\infty$. Note that just because there seems to be a restriction, does not mean it is an asymptote. In the case that the function may be factored to seemingly remove the restriction, a discontinuity would be present in its place. \\
+
+As for HAs, it is said that they occur when the degree of the numerator is less than or equal to the degree of the denominator. You may determine the presence of a HA by taking the limit of the function as x approaches positive or negative infinity. The HA will be slanted (oblique) if the degree of the numerator is greater than the degree of the denominator. An effective means for sketching rational functions is to sketch it in the following order: \begin{itemize}
+    \item Factor if possible.
+    \item Determine VAs.
+    \item Determine HAs including Above/Below.
+    \item Graph the VAs and HAs.
+    \item Determine key points and sketch. \\
+\end{itemize}
+
+Rational Inequalities may easily be solved in this course, as the graph of them must be given. From there you must simply build the set which satisfies the question, although remember to indicate that x is an element of the reals. As for solving rational equations, you will often use the conjugates of the expressions to solve it. Remember that any restrictions must not be included in the final solution, and that complex solutions are valid.
+
+\section{Logarithms and Exponents}
+
+Exponent Laws: \begin{enumerate}
+    \item $a^0=1$
+    \item $a^m \times a^n = a^{m+n}$
+    \item $a^m \div a^n = a^{m-n}$
+    \item $(a^m)^n=a^{mn}$
+    \item $(ab)^n = a^nb^n$
+    \item $a^{-n}=\frac{1}{a^n}$
+    \item $(\frac{a}{b})^{-n}=(\frac{b}{a})^n$
+    \item $a^{\frac{1}{n}}=\sqrt[n]{a}$
+    \item $a^{\frac{m}{n}}=(\sqrt[n]{a})^m$
+\end{enumerate}
+
+Logarithmic Form: $y=\log_{b}x$, $b > 0, b\neq 1, x > 0$. \\
+
+Properties of Logarithms: \begin{enumerate}
+    \item $log_{a}1 = 0$
+    \item $log_{a}a=1$
+    \item $log_{a}a^n=n$
+    \item $a^{log_{a}x}=x$
+    \item $log_{a}xy=log_{a}x+log_{a}y$
+    \item $log_{a}\frac{x}{y}=log_{a}x-log_{a}y$
+    \item $log_{a}x^n=nlog_{a}x$
+    \item $log_{a}\sqrt[n]{x}=\frac{1}{n}log_{a}x$
+\end{enumerate}
+
+To solve exponential equations, first attempt to express the equation as the same base. If not, then express all terms as a logarithm of the same base. For logarithmic equations, evaluate the logs on both sides to solve, or convert from log form to exponential form. \\
+
+As for graphing logarithmic functions, assuming there are no positional translations, it will always have a solution at $1$, and a VA at $0$. Every other point of interest will be a power of the base. Alterations follow the standard form of graphical shifts/stretches. This extends to exponential growth and decay problems, which have the following form: \\
+
+$A = A_0b^n$, where: \begin{itemize}
+    \item $A$ is the final amount
+    \item $A_0$ is the initial amount
+    \item $b$ is the growth/decay factor
+    \item $n$ is the number of growth/decay periods; which extends to $n = \frac{t}{p}$, $t$ = time, $p$ = length of period
+\end{itemize}
+
+Note that when $b > 1$, it is exponential growth, and when $0 < b < 1$, it is exponential decay. $b$ is usually calculated as $b = 1 + r$. \\
+
+Other questions that apply logarithms are those that involve the logarithmic scale. Here are some of the problems you may encounter: \\
+
+$M = logI$, $10^M=I$, $M$ is magnitude of earthquake, $I$ is intensity of earthquake. \\ \\
+$L = 10log\frac{I}{I_0}$, $I_0(10^\frac{L}{10}) = I$, $L$ is loudness in db, $I$ is intensity of measured sound, $I_0$ is intensity of the softest sound. \\ \\
+$pH = -log[H^+]$, $[H^+]$ is the hydrogen concentration in $molL^{-1}$.
+
+\section{Trig Identities}
 
 \end{document}
